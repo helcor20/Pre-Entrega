@@ -1,0 +1,253 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* header */
+header {
+    position: fixed;
+    background: red;
+    height: 80px;
+    width: 100%;
+}
+
+.enlace {
+    position: absolute;
+    padding: 20px 50px;
+}
+
+.logo {
+    height: 40px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+li a:hover {
+    background: blue;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+/* main */
+main {
+    background: url(../img/dc-marvel-omnibus.jpg) fixed;
+    background-size: cover;
+    background-position: auto;
+    padding-top: 100px;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    width: 100%;
+    justify-content: center;
+}
+
+.item {
+    border-radius: 15px;
+    margin: 10px;
+    background-color: #ec1010c4;
+    color: white;
+    padding: 20px;
+}
+
+img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+h3,
+.item p {
+    display: grid;
+    justify-content: center;
+}
+
+/* Formulario */
+form {
+    background-color: #ec1010c4;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.2rem;
+    padding: 20px;
+    margin: 0 auto;
+    width: 60%;
+}
+
+input,
+textarea {
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+}
+
+.parrafo {
+    padding: 15px 0;
+}
+
+.field {
+    border: solid 3px white;
+    padding: 10px;
+}
+
+.field:focus {
+    border-color: #18A383;
+}
+
+.center-content {
+    text-align: start;
+}
+
+.btn {
+    border-radius: 3px;
+    display: inline-block;
+    padding: 20px 15px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.btn-green {
+    color: white;
+    background-color: #0084ff;
+}
+
+.btn-green:hover {
+    background-color: rgb(51, 51, 221);
+}
+
+.btn-green:active {
+    background-color: #29962A;
+}
+
+/* Footer - Pie de página */
+footer {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    background-color: rgb(167, 10, 10);
+    color: white;
+}
+
+.footer-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-contenedor > div {
+    width: 445px;
+    margin: 10px;
+    text-align: start;
+    font-size: 20px;
+}
+
+.footer-terminos {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.footer-terminos > div {
+    width: 100%;
+    margin: 5px;
+    text-align: center;
+}
+
+/* Media Queries - Diseño Responsivo */
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #920f05;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    li a:hove {
+        background: none;
+        color: red;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+    form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 952px) {
+    .enlace {
+        padding-left: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .container {
+        grid-template-columns: 400px;
+    }
+
+    .footer-contenedor {
+        justify-content: center;
+    }
+    .footer-contenedor > div {
+        width: 100%;
+        padding: 20px;
+    }
+}
